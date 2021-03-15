@@ -38,15 +38,28 @@
             <section class="restaurants">
                 <div class="section-heading">
                     <h2 class="section-title">Рестораны</h2>
-                    <select name="categories" id="categories" class="category-select"
+                    <input type="text" class="input input-search" placeholder="Поиск блюд и ресторанов">
+                    <div class="filters-section">
+                        <select name="categories" id="categories" class="category-select"
                     style="width:200px;">
                         <option value="" class="option-cat">Категории</option>
                         <option value="pizza" class="option-cat">Пицца</option>
                         <option value="sushi" class="option-cat">Суши</option>
                         <option value="dessert" class="option-cat">Десерт</option>
                         <option value="Fast-food" class="option-cat">Фаст-фуд</option>
-                    </select>
-                    <input type="text" class="input input-search" placeholder="Поиск блюд и ресторанов">
+                        </select>
+                        <ol class="filters">
+                            <li>
+                              <label for="5+">Рейтинг 5</label>
+                            </li>
+                            <li>
+                              <label for="4.5+">Рейтинг 4.5+</label>
+                            </li>
+                            <li>
+                              <label for="good">Хорошие рестораны</label>
+                            </li>
+                          </ol>
+                    </div>
                 </div>
                 <div class="cards">
                     <a href="restaurant.html" class="card">
