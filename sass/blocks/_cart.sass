@@ -1,6 +1,7 @@
 .cart
   &__container
     border-top: 1px solid black
+    border-bottom: 1px solid black
   &__header
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr
@@ -26,7 +27,8 @@
   &__buttons
     display: flex
     align-items: center
-    justify-content: flex-end
+    justify-content: space-between
+    margin-top: 20px
   &__btn
     padding: 8px 16px
     background: #1890FF
@@ -38,3 +40,6 @@
     line-height: 24px
     display: flex
     align-items: center
+  &__pricetag
+    font-size: 20px
+    font-weight: bold

@@ -951,6 +951,7 @@ template {
 
 .cart__container {
   border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .cart__header {
@@ -988,7 +989,8 @@ template {
 .cart__buttons {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .cart__btn {
@@ -1002,6 +1004,11 @@ template {
   line-height: 24px;
   display: flex;
   align-items: center;
+}
+
+.cart__pricetag {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 @media (max-width: 1366px) {
