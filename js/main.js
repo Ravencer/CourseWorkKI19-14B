@@ -10,5 +10,23 @@ if (document.body.id === 'index' || document.body.id === 'restaurant') {
 	if (close !== null) {
 		close.addEventListener('click', toggleModal);
 	}
-}
 
+	if (document.body.id === 'index') {
+		const cards = document.querySelectorAll('.card');
+		const selectCategory = document.querySelector('.category-select');
+		const toggleCards = category => {
+			cards.forEach(element => {
+				if (category === '1') {
+					element.style.display = 'inline';
+				} else if (element.dataset.category !== category) {
+					element.style.display = 'none';
+				} else if (element.dataset.category === category) {
+					element.style.display = 'inline';
+				}
+			});
+		};
+		selectCategory.addEventListener('change', () => {
+			toggleCards(selectCategory.value);
+		});
+	}
+}
