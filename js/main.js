@@ -18,9 +18,9 @@ if (document.body.id === 'index' || document.body.id === 'restaurant') {
 			cards.forEach(element => {
 				if (category === '1') {
 					element.style.display = 'inline';
-				} else if (element.dataset.category !== category) {
+				} else if (element.querySelector('.category').textContent !== category) {
 					element.style.display = 'none';
-				} else if (element.dataset.category === category) {
+				} else if (element.querySelector('.category').textContent === category) {
 					element.style.display = 'inline';
 				}
 			});
