@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
 </head>
-<body id="index">
+<body>
     <div class="container">
         <!-- Шапка сайта -->
     <header class="header">
@@ -27,7 +27,7 @@
     </header>
     
     </div>
-    <main class="main">
+    <main class="main" id="index">
         <div class="container">
             <section class="promo">
                 <h1 class="promo-title">Онлайн сервис <br />доставки еды на дом</h1>
@@ -48,14 +48,14 @@
                         <option value="Фаст-фуд" class="option-cat">Фаст-фуд</option>
                         </select>
                         <ol class="filters">
-                            <li>
-                              <label for="5+">Рейтинг 5</label>
+                            <li data-rating="5">
+                              Рейтинг 5
                             </li>
-                            <li>
-                              <label for="4.5+">Рейтинг 4.5+</label>
+                            <li data-rating="4.5">
+                              Рейтинг 4.5+
                             </li>
-                            <li>
-                              <label for="good">Хорошие рестораны</label>
+                            <li data-rating="3.8">
+                              Хорошие рестораны
                             </li>
                           </ol>
                     </div>

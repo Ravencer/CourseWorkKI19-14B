@@ -1066,6 +1066,9 @@ template {
   border: none;
   margin-bottom: 15px;
 }
+.filter-active{
+  background-color: #fff1b8 !important;
+}
 
 @media (max-width: 1366px) {
   .container {
