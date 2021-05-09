@@ -16,6 +16,21 @@ if (document.querySelector('main').id === 'index' || document.querySelector('mai
 		const selectCategory = document.querySelector('.category-select');
 		const filtersSection = document.querySelector('.filters');
 		const filtersPoints = [...filtersSection.querySelectorAll('li')];
+		const inputSearch = document.querySelector('.input-search');
+		inputSearch.addEventListener("keyup", ({ key }) => {
+			if (key === "Enter") {
+				localStorage.setItem('search', inputSearch.value);
+				cards.forEach(element => {
+					if (inputSearch.value.toLowerCase() === element.querySelector('.card-title').textContent.trim().toLowerCase()) {
+						element.style.display = 'block';
+					} else if (inputSearch.value.trim() === '') {
+						element.style.display = 'block';
+					} else {
+						element.style.display = 'none';
+					}
+				});
+			}
+		});
 		const toggleCards = category => {
 			cards.forEach(element => {
 				if (category === '1') {
@@ -28,9 +43,16 @@ if (document.querySelector('main').id === 'index' || document.querySelector('mai
 			});
 		};
 		selectCategory.addEventListener('change', () => {
+			localStorage.setItem('category', selectCategory.value);
 			toggleCards(selectCategory.value);
 		});
-		console.log(filtersPoints[0].classList);
+		if (localStorage.getItem('category') !== 1) {
+			toggleCards(localStorage.getItem('category'));
+			selectCategory.value = localStorage.getItem('category');
+		}
+		if (localStorage.getItem('search') !== '') {
+			inputSearch.value = localStorage.getItem('search');
+		}
 		filtersSection.addEventListener('click', e => {
 			if (e.target.tagName === 'LI') {
 				toggleCards('1');
@@ -63,3 +85,4 @@ if (document.querySelector('main').id === 'index' || document.querySelector('mai
 
 	}
 }
+
