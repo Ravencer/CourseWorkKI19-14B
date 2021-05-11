@@ -383,8 +383,13 @@ template {
 }
 
 .input-address {
-  flex: 0.8;
   background-image: url(../img/home.svg);
+  max-width: 100%;
+  width: 100%;
+}
+
+.form-address{
+  flex: 0.8;
 }
 
 .input-search {
@@ -991,6 +996,7 @@ template {
   text-align: center;
   font-size: 16px;
   font-weight: bold;
+  flex-basis: 100%;
 }
 
 .cart__buttons {
@@ -1012,10 +1018,29 @@ template {
   display: flex;
   align-items: center;
 }
+.cart__btn--del {
+  padding: 5px 12px;
+  background: #fff1b8;
+  color: black;
+  border: 1px solid #fff1b8;
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.0015);
+  border-radius: 2px;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
 
 .cart__pricetag {
   font-size: 20px;
   font-weight: bold;
+}
+.cart__item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .order__form {
@@ -1068,6 +1093,22 @@ template {
 }
 .filter-active{
   background-color: #fff1b8 !important;
+}
+.auth-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.form-auth{
+  flex-basis: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.auth-link{
+  display: inline-block;
+  min-width: 320px;
 }
 
 @media (max-width: 1366px) {
@@ -1165,10 +1206,11 @@ template {
   .header {
     flex-wrap: wrap;
   }
-  .input-address {
+  .form-address {
     order: 5;
     margin-top: 15px;
     flex: 1;
+    flex-basis: 100%;
   }
   .promo {
     background-image: none;
@@ -1232,6 +1274,28 @@ template {
     padding-bottom: 5px;
     width: 100%;
   }
+  .cart__header--title{
+    font-size: 14px;
+  }
+  .cart__desc{
+    font-size: 12px;
+  }
+  .cart__header {
+    display: none;
+}
+.cart__btn--del {
+  padding: 3px 10px;
+  background: #fff1b8;
+  color: black;
+  border: 1px solid #fff1b8;
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.0015);
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
 }
 
 @media (max-width: 480px) {
@@ -1297,5 +1361,16 @@ template {
   .cart__pricetag {
     font-size: 14px;
   }
+  .auth-link{
+    min-width: 250px;
+  }
+  .cart__image {
+    max-width: 50px;
+    width: 100%;
+    height: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
 }
 /*# sourceMappingURL=style.css.map */
