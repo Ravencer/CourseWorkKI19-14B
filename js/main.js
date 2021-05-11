@@ -46,7 +46,7 @@ if (document.querySelector('main').id === 'index' || document.querySelector('mai
 			localStorage.setItem('category', selectCategory.value);
 			toggleCards(selectCategory.value);
 		});
-		if (localStorage.getItem('category') !== 1) {
+		if (localStorage.getItem('category') !== 1 && localStorage.getItem('category')) {
 			toggleCards(localStorage.getItem('category'));
 			selectCategory.value = localStorage.getItem('category');
 		}
